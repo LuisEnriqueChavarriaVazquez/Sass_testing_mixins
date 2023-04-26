@@ -1,0 +1,25 @@
+@use '_mediaQueries.scss' as media;
+@use '_variables.scss' as colors;
+
+@use '_firstSection.scss';
+@use '_nav.scss';
+@use '_footer.scss';
+@use '_products.scss';
+@use '_why.scss';
+@use '_gallery.scss';
+@use '_map.scss';
+
+*, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: colors.$primary-color;
+    font-family: colors.$font-stackl;
+}
+
+.info-section{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+}

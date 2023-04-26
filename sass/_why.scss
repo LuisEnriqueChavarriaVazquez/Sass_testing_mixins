@@ -1,0 +1,53 @@
+@use '_mediaQueries.scss' as media;
+@use '_variables.scss' as colors;
+
+.about-us{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 40px;
+    
+    h2{
+        font-size: 2.5rem;
+        color: colors.$primary-text-color;
+    }
+
+    section{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        padding: 40px;
+
+        @include media.miniphone{
+            grid-template-columns: 1fr;
+        }
+
+
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            img{
+                margin-bottom: 20px;
+            }
+
+            p{
+                width: 50%;
+                font-size: 20px;
+                text-align: center;
+                color: colors.$primary-text-color;
+                font-weight: 700;
+
+                @include media.phone{
+                    font-size: 18px;
+                }
+
+                @include media.miniphone{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

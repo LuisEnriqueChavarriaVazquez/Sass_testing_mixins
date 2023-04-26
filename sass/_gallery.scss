@@ -1,0 +1,48 @@
+@use '_mediaQueries.scss' as media;
+@use '_variables.scss' as colors;
+
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 40px;
+    
+    h2{
+        font-size: 2.5rem;
+        color: colors.$primary-text-color;
+    }
+
+    section{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        height: 500px;
+
+        @include media.phone{
+            grid-template-columns: 1fr;
+            height: auto;
+        }
+
+        @include media.miniphone{
+            grid-template-columns: 1fr;
+            height: auto;
+        }
+
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+
+            img{
+                width: 250px;
+                height: 250px;
+                margin-bottom: 20px;
+                border-radius: 20px;
+            }
+        }
+    }
+}

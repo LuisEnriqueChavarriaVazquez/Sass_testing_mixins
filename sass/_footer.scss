@@ -1,0 +1,48 @@
+@use '_mediaQueries.scss' as media;
+@use '_variables.scss' as colors;
+
+footer{
+    background-color: colors.$highColor;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    h3,p,div{
+        background-color: transparent;
+        color: rgb(66, 44, 10);
+    }
+
+    h3{
+        height: 20px;
+        font-size: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    p{
+        height: 20px;
+        font-size: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px;
+    }
+
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+
+        img{
+            margin: 0 20px;
+            background-color: transparent;
+        }
+    }
+
+    
+}
